@@ -28,6 +28,16 @@
     cardTemplate: document.querySelector('.card-template')
   }
 
+  app.updateTrends = (trends) => {
+    const trendsRow = document.querySelector('.trends')
+
+    for(let i = 0; i < trends.length; i++) {
+      const trend = trends[i]
+
+      trendsRow.appendChild(app.createCard(trend))
+    }
+  }
+
   app.createCard = (trend) => {
     const card = app.cardTemplate.cloneNode(true)
 
@@ -40,16 +50,6 @@
     card.querySelector('.card-link').setAttribute('target', '_blank')
 
     return card
-  }
-
-  app.updateTrends = (trends) => {
-    const trendsRow = document.querySelector('.trends')
-
-    for(let i = 0; i < trends.length; i++) {
-      const trend = trends[i]
-
-      trendsRow.appendChild(app.createCard(trend))
-    }
   }
 
   app.getTrends = function () {
