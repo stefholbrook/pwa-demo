@@ -61,7 +61,7 @@
           response.json().then(function(trends) {
             console.log('From cache...')
             if(!networkReturned) {
-              app.updateTrends(trends)
+              app.updateTrends(trends.items)
             }
           })
         }
@@ -89,7 +89,7 @@
   // Check if the browser supports service workers
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('/service-worker.js')
+      .register('../service-worker.js')
       .then(() => console.log('ServiceWorker registered'))
   }
 })()
