@@ -1,37 +1,3 @@
-/*
-  The manifest file is a JSON file where you configure how your app appears to
-  users by adding icons and splash screens. It also lets you define what URL the
-  app is accessed with when launched from the app icon. Basically, all other PWA
-  features that accept offline capabilities are configured here.
-*/
-
-/*
-  The name and short_name properties define the application name. They are usually
-  the brand name of the app or whatever is found in the title tag of your index.html.
-  The name property is used where the user needs to see the full brand and of
-  course where there is enough room for it. Otherwise, in cases where there is
-  no enough room for the name property, the short_name is used.
-*/
-
-/*
-  The icons property takes an array of icons. There is a reason for this. It
-  allows the browser to choose which icon makes sense on particular display size
-  and density. Most times, 192 x 192 fits most cases so you might just end up
-  having one item in the array with that value.
-*/
-
-/*
-  Display: This determines whether the browser's surroundings will show or not.
-  Removing the surrounding makes the app feel more like a native app. To remove,
-  just add standalone
-*/
-
-/*
-  The start URL is the page that the user sees when the launch your app from the
-  home screen. This is usually the home page of the app. For marketing purposes,
-  you can also gather data about users launching the app as PWA using utm_source
-*/
-
 {
   "short_name": "Git Trends",
   "name": "Git Trends",
@@ -47,9 +13,3 @@
   "theme_color": "#009688",
   "display": "standalone"
 }
-
-/*
-  For the manifest file to be recognized by your file, you need to include it in
-  your index.html. But before you do so, it is recommended to use a validation
-  tool to validate the manifest file.
-*/
