@@ -69,13 +69,14 @@
     }
 
     fetch(app.apiURL)
-      .then((response) => response.json())
-      .then((trends) => {
-        console.log('From server...')
-
-        app.updateTrends(trends.items)
-        networkReturned = true
-      }).catch((err) => console.log(err))
+    .then(response => response.json())
+    .then(function(trends) {
+      console.log('From server...')
+      app.updateTrends(trends.items)
+      networkReturned = true;
+    }).catch(function(err) {
+      // Error :(
+    });
   }
 
   document.addEventListener('DOMContentLoaded', () => {
